@@ -1,0 +1,246 @@
+
+*{
+    padding:0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body{
+background-color: #f1ebeb ;
+height: 100vh;
+width: 100%;
+/* display: flex; */
+justify-content: center ;
+align-items: center;
+}
+.container{
+width: 100%;
+height: 90%;
+background: rgb(97, 89, 69);
+} 
+.dd{
+background-color:black;
+}
+nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 80%;
+margin: auto;
+padding: 20px 0; 
+}
+nav .logo{
+color:rgb(216, 166, 38);
+text-decoration: none;
+font-size: 40px;
+text-transform: uppercase;
+letter-spacing: 3px;
+font-weight: 700;
+}
+nav ul li{
+display: inline-block;
+margin: 0 5px;
+}
+
+nav ul li a{
+color:white;
+text-decoration: none ;
+font-size: 18px;
+font-weight: 500;
+}
+nav ul li a:hover {
+color: red;
+background-color: black;
+}
+.map_container{
+    width: 100%;
+    height: 280px;
+    /* background-color: blue;
+    justify-content: center; */
+    
+    
+}
+.story_container{
+    width: 70%;
+    height: 470px;
+   color: red;
+  margin-left: 280px;
+    background-image: url(storymap_logo.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+}
+.dashboard_container1{
+    width: 100%;
+    height: 300px;
+    background-image: url(/dashboard1985.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.dashboard_container2{
+    width: 100%;
+    height: 300px;
+    background-image: url(dashboard1995.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.dashboard_container3{
+    width: 100%;
+    height: 300px;
+    background-image: url(dashboard2005.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.dashboard_container4{
+    width: 100%;
+    height: 300px;
+    background-image: url(dashboard2023.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.pdash{
+  
+    color: blue;
+    margin-left: 170px;
+    margin-bottom: 20px;
+}
+.survey_container{
+    
+    background-image: url();
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-color: blueviolet;
+    height: 250px;
+    width: 60%;
+    justify-content: center;
+    margin-left: 245px;
+    
+}
+.homediv{
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.pragrahp{
+    width: 700px;
+    height: auto;
+    font-style: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+    word-wrap: break-word;
+}
+.img{
+    
+    width: 650px;
+    height: 400px;
+    
+}
+.img2{
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+}
+.show{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 90%;
+    width: 100%;
+  }
+
+
+.storydiv{
+   margin: 0;
+    width: 100%;
+    display: block;
+    /* display: grid;
+    grid-template-columns: auto auto; */
+}
+.dashdiv{
+    margin: 2opx;
+    width: 100%;
+    display: block;
+    display: grid;
+    grid-template-columns: auto auto; 
+    
+}
+.dp{
+    margin-top: 20px;
+    width: 100%;
+    /* height:600px; */
+    color: rgb(20, 16, 12);
+    word-wrap: break-word;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+.sp{
+    margin: 30px;
+    margin-left: 55px;
+    width: 85%;
+    height: auto;
+    color: rgb(20, 16, 12);
+    
+    word-wrap: break-word;
+}
+.p_home{
+    color: black;
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    align-items: center;
+}
+.logo-img{
+margin-left: 245px;
+}
+.ff{
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    background-color: rgb(6, 78, 54);
+    text-align: center;
+  
+    display: flex;
+    align-items: center;
+}
+.aa{
+    width: 100%;
+    height: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-top: -1%;
+    
+}
+@media (min-width:950px) and (max-width:1150px) {
+    .content .image  img{
+        width: 300px;
+    }
+    
+    
+}
+
+@media (max-width:950px) {
+    .content , nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .image, .container .text{
+        width: 80%;
+    }
+}

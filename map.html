@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.19/"></script>
+    <script src="map.js"></script>
+</head>
+
+<body>
+    <div>
+      <header class="dd">
+        <nav>
+            <p class="logo" >Qena Urbans</p>
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/map.html">map</a></li>
+                <li><a href="/story_map.html">story map</a></li>
+                <li><a href="/dashboard.html">dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+    </div>
+    <div id="mapView" style="height: 500px; width: 950px;"></div>
+    <div>
+      <button type="button" id="btn">BasemapGallery</button>
+    </div>
+    <script>
+      
+
+require(["esri/config", "esri/Map",
+    "esri/views/MapView", "esri/widgets/BasemapGallery"
+    , "esri/widgets/Locate", "esri/widgets/Directions"
+    , "esri/layers/RouteLayer", "esri/layers/FeatureLayer", "esri/widgets/Attribution"],
+    (esriConfig, Map, MapView, BasemapGallery,
+        Locate, Directions, RouteLayer, FeatureLayer, Attribution) => {
+
+        esriConfig.apiKey = "AAPK9fe6f0f80f4445dfbf2302f889f304d9WlhPqLn1ukyHpDxWRL-rbo1ucq2uq4m-ELZSSJYoP0WISkvtLT_gFPUehCVXb7LJ"
+
+//   Create a map
+  const map = new Map({
+    basemap: "streets"
+  });
+
+//   // Create a view
+  const view = new MapView({
+    container: "mapView",
+    map: map,
+    zoom: 13,
+    center: [32.7180, 26.1615]
+  });
+  var myGallery = new BasemapGallery({
+            view: myView,
+        })
+        var bmg = true
+
+        myView.ui.add(myGallery, "bottom-left")
+        document.getElementById("btn").addEventListener("click", function () {
+            if (bmg == true) {
+                myGallery.visible = false
+                bmg = false
+            } else {
+                myGallery.visible = true
+                bmg = true
+            }
+
+        })
+// //   Create a feature layer for the governments of Qena
+  const governmentsLayer = new FeatureLayer({
+    url: "https://services7.arcgis.com/WNpHPQpK3HrJJsoO/arcgis/rest/services/qena_featurestojson/FeatureServer/0",
+    // popupTemplate: {
+    //     title: "{GovernmentName}",
+    //   content: "Population: {Population}"
+    // }
+ 
+  });
+  map.add(governmentsLayer)
+  const layer = new FeatureLayer({
+  portalItem: {
+    id: "92288c860f324560b34594e98c7d9a86"
+  }
+});
+
+map.add(layer);
+
+});
+const layer = new FeatureLayer({
+  portalItem: {
+    id: "d75e38f3e6df4d4f8129d0efd8500d53"
+  }
+});
+
+map.add(layer);
+</script>
+</body>
+</html>
